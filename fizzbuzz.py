@@ -1,18 +1,21 @@
-A=[]
-B=[]    
-A= input('enter for list A:')        
-B= input('enter for list B:')
 
-def fizzbuzz (A,B):
-   
-    C=len(A)+len(B)
 
-    if  (C%5==0 and C%3==0):
-        print( 'fizzbuzz')
-    elif (C%3==0):
-        print ('fizz')
-    elif (C%5==0):
-        print ('buzz')
+def fizzbuzz(A, B):
+    
+    if not (isinstance(A, list) and isinstance(B, list)):
+        return "Invalid input"
+    C = len(A)+len(B)
+
+    if (C % 5 == 0 and C % 3 == 0):
+        return('fizzbuzz')
+    elif (C % 3 == 0):
+        return('fizz')
+    elif (C % 5 == 0):
+        return('buzz')
     else:
-         print (C)   
-fizzbuzz(A,B)
+        return(C)
+
+
+A = [1, 2, 3, 4]
+B = [1, 2, 3, 4]
+fizzbuzz(A, B)
